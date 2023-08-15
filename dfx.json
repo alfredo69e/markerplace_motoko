@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "markerplace_backend": {
+      "main": "src/markerplace_backend/main.mo",
+      "type": "motoko"
+    },
+    "markerplace_frontend": {
+      "dependencies": [
+        "markerplace_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/markerplace_frontend/src/index.html"
+      },
+      "source": [
+        "src/markerplace_frontend/assets",
+        "dist/markerplace_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
